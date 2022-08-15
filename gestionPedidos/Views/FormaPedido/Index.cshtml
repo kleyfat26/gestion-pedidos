@@ -1,0 +1,815 @@
+﻿@model IEnumerable<gestionPedidos.Models.Poee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Formaped)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Namecliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vendedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Namevendedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Operador)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fechapedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fechaenvio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formapago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaComienza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperadorOficina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaOficina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SitioReparto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Urgente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaHoraurgente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperUrgente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaSuperurgente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoOficina)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperadorEscoger)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaEscoger)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoEscogerped)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperadorFinaliza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaFinaliza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Navepre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Letrapre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sitiopre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadCarro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadRecogePalet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadRecogeBultos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CajeroInicia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CafechaInicia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CajeroFinaliza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Navecom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Letracom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sitiocom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadcajaPalet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadcajaBultos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadcajaCarro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CafechaFinaliza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoEscoger)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperadorEmbalaje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaEmbalaje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UbicacionEmbalaje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Embalajeter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Embalajefeter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoEmbalaje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmbalajePeso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmbalajePesob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmbalajePesom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmbalajePesop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Naveemba)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Letraemba)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sitioemba)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dirubi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoFacturacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioAutorizafac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoContabilizado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioAutorizaconta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IniciarFacturacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FinalizarEtiquetado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Banco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AutorizaSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomAutorizaSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperadorTransporte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaTransporte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transportista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadBultos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadMedio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadPalet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoPalet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fechasalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nalbaran)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nfactura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Borrado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Devolucion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Logico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Liquidado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fechapreparado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Importepedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Importefactura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cobrado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jinez)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marcocomprobar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dejapedi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Retenerpedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fechapreparado2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quienborro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Obsenviopedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Naveagencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaEntregaExpe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expedicion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pagadologistica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vuelta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estadoweb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comentario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NuevaUbicacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarcadoSalida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormaPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaLiquidado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiFechafactura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiFechaEnvio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiNumeroFactura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiImportefactura)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiDescuento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiImporteConDes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiDevolucion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiImportependiente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiImportecobrado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiSituacionpago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiObspago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiComision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LiquiImporteComision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoLiquidacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoReponer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kmsalidaempresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kmllegadaempresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Horasalidaempresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Horallegadaempresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpezarCaja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Almacenar)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Formaped)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Namecliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vendedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Namevendedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Operador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fechapedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fechaenvio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Formapago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaComienza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperadorOficina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaOficina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SitioReparto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Urgente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHoraurgente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SuperUrgente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaSuperurgente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoOficina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperadorEscoger)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEscoger)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoEscogerped)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperadorFinaliza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaFinaliza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Navepre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Letrapre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sitiopre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadCarro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadRecogePalet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadRecogeBultos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CajeroInicia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CafechaInicia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CajeroFinaliza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Navecom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Letracom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sitiocom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadcajaPalet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadcajaBultos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadcajaCarro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CafechaFinaliza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoEscoger)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperadorEmbalaje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEmbalaje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UbicacionEmbalaje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Embalajeter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Embalajefeter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoEmbalaje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmbalajePeso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmbalajePesob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmbalajePesom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmbalajePesop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naveemba)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Letraemba)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sitioemba)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dirubi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoFacturacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioAutorizafac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoContabilizado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioAutorizaconta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IniciarFacturacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalizarEtiquetado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Banco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AutorizaSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomAutorizaSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperadorTransporte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaTransporte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Agencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transportista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadBultos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadMedio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadPalet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoPalet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fechasalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nalbaran)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nfactura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Borrado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Devolucion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Liquidado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fechapreparado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importepedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importefactura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cobrado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jinez)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marcocomprobar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dejapedi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Retenerpedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fechapreparado2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quienborro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Obsenviopedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naveagencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaEntregaExpe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expedicion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pagadologistica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vuelta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estadoweb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comentario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NuevaUbicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarcadoSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormaPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaLiquidado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiFechafactura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiFechaEnvio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiNumeroFactura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiImportefactura)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiDescuento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiImporteConDes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiDevolucion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiImportependiente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiImportecobrado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiSituacionpago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiObspago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiComision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiquiImporteComision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoLiquidacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoReponer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kmsalidaempresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kmllegadaempresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Horasalidaempresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Horallegadaempresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpezarCaja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Almacenar)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
